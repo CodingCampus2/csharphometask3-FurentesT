@@ -16,8 +16,8 @@ namespace HomeworkTemplate
                 string UserLatitude = task.UserLatitude;
                 int placesAmount = task.DefibliratorStorages.Length;
 
-                float.TryParse(UserLatitude.Replace(',', '.'), out float fUserLatitude);
-                float.TryParse(UserLongitude.Replace(',','.'), out float fUserLongitude);
+                float.TryParse(UserLatitude, out float fUserLatitude);
+                float.TryParse(UserLongitude, out float fUserLongitude);
 
                 float distance = float.MaxValue;
 
@@ -34,8 +34,8 @@ namespace HomeworkTemplate
 
                     string[] defibliratorStorageArr = defibliratorStorage.Split(';');
                     
-                    float.TryParse(defibliratorStorageArr[2].Replace(',','.'), out float lognitude);
-                    float.TryParse(defibliratorStorageArr[3].Replace(',','.'), out float latitude);
+                    float.TryParse(defibliratorStorageArr[2], out float lognitude);
+                    float.TryParse(defibliratorStorageArr[3], out float latitude);
 
                     lognitude *= degreeToRadCoef;
                     latitude *= degreeToRadCoef;
